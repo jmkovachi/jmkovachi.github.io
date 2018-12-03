@@ -30,6 +30,10 @@
                 grid-area: footer;
             }
 
+            h1 {
+                font-size: 3rem;
+            }
+
             section {
                 display: flex;
                 flex-direction: column;
@@ -56,13 +60,16 @@
                 border-radius: 100%;
             }
 
-            @media (min-width: 500px) {
-                .content {
+            .content {
                     height: 100%;
                 }
 
                 .intro {
                     height: 500px;
+                }
+
+                .intro > * {
+                    padding-bottom: 30px;
                 }
 
                 nav ul {
@@ -83,16 +90,29 @@
                 .intro {
                     padding-bottom: 20px;
                 }
+                
+                .social {
+                    padding-bottom: 0px !important;
+                    padding-top: 50px;
+                }
 
                 input {
                     margin-left: 25%;
                     margin-right: 25%;
+                    border: none;
+                    border-bottom: 2px solid black;
+                    background-color: whitesmoke;
+                    font-family: 'Courier New', Courier, monospace;
                 }
 
                 textarea {
                     margin-left: 25%;
                     margin-right: 25%;
+                    background-color: whitesmoke;
                 }
+
+            @media (min-width: 500px) {
+                
             }
         </style>
     </head>
@@ -138,8 +158,11 @@
         </section>
         <section>
             <h2 class="center">Contact</h2>
-            <input class="center" placeholder="Your name" name="name">
-            <input class="center" placeholder="Your email" name="email">
+            <div>Name</div>
+            <input class="center" name="name">
+            <div>Email</div>
+            <input class="center" name="email">
+            <div></div>
             <textarea placeholder="Message me"></textarea>
         </section>
     </div>
