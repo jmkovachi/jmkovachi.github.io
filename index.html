@@ -1,11 +1,149 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <style>
+            html {
+                background-color: whitesmoke;
+                color: black;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .main-head {
+                grid-area: header;
+            }
+            .content {
+                grid-area: content;
+            }
+            .main-nav {
+                grid-area: nav;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            .side {
+                grid-area: sidebar;
+            }
+            .ad {
+                grid-area: ad;
+            }
+            .main-footer {
+                grid-area: footer;
+            }
 
+            section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .social {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .links {
+                padding: 10px;
+            }
+
+            .center {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            img {
+                border-radius: 100%;
+            }
+
+            @media (min-width: 500px) {
+                .content {
+                    height: 100%;
+                }
+
+                .intro {
+                    height: 500px;
+                }
+
+                nav ul {
+                    display: flex;
+                    justify-content: flex-start;
+                    list-style-type: none;
+                }
+
+                li {
+                    padding: 10px;
+                }
+
+                p {
+                    padding-left: 50px;
+                    padding-right: 50px;
+                }
+                
+                .intro {
+                    padding-bottom: 20px;
+                }
+
+                input {
+                    margin-left: 25%;
+                    margin-right: 25%;
+                }
+
+                textarea {
+                    margin-left: 25%;
+                    margin-right: 25%;
+                }
+            }
+        </style>
     </head>
-    <header class="nav">
-        <a></a>
-        <a></a>
-        <a></a>
-    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#" id="home">Home</a></li>
+            <li><a href="#" id="about">About</a></li>
+            <li><a href="#" id="contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <section class="intro">
+            <h1 class="center">John Michael Kovachi</h1>
+            <div class="center">
+                <img height="250" width="400" border="5" src="me.png"/>
+            </div>
+            <div class="social">
+                <a class="links" href="https://www.linkedin.com/in/jmkovachi"><i class="fa-3x fab fa-linkedin-in"></i></a>
+                <a class="links" href="https://www.github.com/jmkovachi"><i class="fa-3x fab fa-github"></i></a>
+                <a class="links" href="https://www.instagram.com/jmkovachi"><i class="fa-3x fab fa-instagram"></i> <!-- this icon's 1) style prefix == fas and 2) icon name == stroopwafel --></a>
+            </div>
+        </section>
+        <section class="break">
+            <br>
+        </section>
+        <section>
+            <h2 class="center">About</h2>
+            <p class="center">Hi, I'm John Michael (yes, I have two first names!). I am an aspiring software
+                engineer interested in web development and distributed computing. I am starting
+                at Amazon in March 2019 as a software development engineer and I could not be more
+                excited. 
+            </p>
+            <p>
+                I am a passionate coder and technologist that is always hungry 
+            </p>
+            <p>Check out my github for a detailed look at some of my projects. I've built projects ranging across
+                a variety of fields in computer science, including web development, natural language processing, networking,
+                and operating systems. For example, I did <a href="https://github.com/jmkovachi/sent-classifer">NLP research on affects of financial news on the stock market</a>,
+                <a href="https://github.com/jmkovachi/Bookstore">built a fully functioning e-commerce website</a>, and 
+                <a href="https://github.com/jmkovachi/Unix-Shell">implemented over a dozen of the most useful UNIX utilities from scratch</a>. These are just some examples of the stuff I'm interested in, and I'm always trying to contribute more.
+                My next goals are to complete a React Native project I've been excited about and then foray into a project related to distributed systems.
+            </p>
+        </section>
+        <section>
+            <h2 class="center">Contact</h2>
+            <input class="center" placeholder="Your name" name="name">
+            <input class="center" placeholder="Your email" name="email">
+            <textarea placeholder="Message me"></textarea>
+        </section>
+    </div>
+    <footer class="main-footer">
+        <div></div>
+    </footer>
 </html>
