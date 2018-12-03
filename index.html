@@ -150,7 +150,7 @@
                 margin-right: 0% !important;
             }
 
-            section > div {
+            form > div {
                 margin-left: 25%;
                 margin-right: 25%;
                 margin-bottom: 2px;
@@ -158,6 +158,7 @@
             }
 
             .btn {
+                margin-top: 30px;
                 margin-left: 42%;
                 padding-top: 15px;
                 margin-right: 42%;
@@ -168,8 +169,14 @@
                 font-family: 'Courier New', Courier, monospace;
             }
 
-            button:active {
+            .btn:hover {
                 border: none;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
 
             @media (min-width: 500px) {
@@ -240,14 +247,14 @@
         <br>
         <section>
             <h2 class="center">Contact</h2>
-            <div>Name</div>
             <form action="https://formspree.io/johnm.kovachi@gmail.com" method="POST">
+                <div>Name</div>
                 <input class="center" name="name">
                 <div>Email</div>
                 <input class="center" name="_replyto">
                 <div></div>
                 <textarea name="body" placeholder="Message"></textarea>
-                <button type="submit" value="Send">Email</button>
+                <button type="submit" class="btn" value="Send"><a href="">Send</a></button>
             </form>
         </section>
     </div>
