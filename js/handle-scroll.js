@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $("#about").click(function () {
-        scroll(".about-section");
+        $(".about-section")[0].scrollIntoView({behavior: "smooth"});
+        return false;
     });
 
     $("#resume").click(function() {
