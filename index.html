@@ -18,7 +18,6 @@
                 grid-area: nav;
                 display: flex;
                 flex-direction: column;
-                width: 100%;
             }
             .side {
                 grid-area: sidebar;
@@ -61,55 +60,107 @@
             }
 
             .content {
-                    height: 100%;
-                }
+                height: 100%;
+            }
 
-                .intro {
-                    height: 500px;
-                }
+            .intro {
+                height: 500px;
+            }
 
-                .intro > * {
-                    padding-bottom: 30px;
-                }
+            .nav-content {
+                display: flex;
+                justify-content: space-between;
+            }
 
-                nav ul {
-                    display: flex;
-                    justify-content: flex-start;
-                    list-style-type: none;
-                }
+            nav ul {
+                display: flex;
+                justify-content: flex-end;
+                list-style-type: none;
+            }
 
-                li {
-                    padding: 10px;
-                }
+            .intro > * {
+                padding-bottom: 30px;
+            }           
 
-                p {
-                    padding-left: 50px;
-                    padding-right: 50px;
-                }
-                
-                .intro {
-                    padding-bottom: 20px;
-                }
-                
-                .social {
-                    padding-bottom: 0px !important;
-                    padding-top: 50px;
-                }
+            li {
+                padding: 10px;
+            }
 
-                input {
-                    margin-left: 25%;
-                    margin-right: 25%;
-                    border: none;
-                    border-bottom: 2px solid black;
-                    background-color: whitesmoke;
-                    font-family: 'Courier New', Courier, monospace;
-                }
+            p {
+                padding-left: 10%;
+                padding-right: 10%;
+            }
+            
+            .intro {
+                padding-bottom: 20px;
+            }
+            
+            .social {
+                padding-bottom: 0px !important;
+                padding-top: 50px;
+            }
 
-                textarea {
-                    margin-left: 25%;
-                    margin-right: 25%;
-                    background-color: whitesmoke;
-                }
+            input {
+                margin-left: 25%;
+                margin-right: 25%;
+                border: none;
+                background-color: whitesmoke;
+                font-family: 'Courier New', Courier, monospace;
+                background-color: whitesmoke;
+                transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                outline: 0;
+                box-shadow: none;
+                border: none;
+                border-bottom: 1px solid #ced4da;
+                border-radius: 0;
+                box-sizing: content-box;
+                background-color: transparent;
+                overflow-y: hidden;
+                resize: none;
+                margin-bottom: 10px;
+            }
+
+            textarea {
+                margin-left: 25%;
+                margin-right: 25%;
+                background-color: whitesmoke;
+                transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                outline: 0;
+                box-shadow: none;
+                border: none;
+                border-bottom: 1px solid #ced4da;
+                border-radius: 0;
+                box-sizing: content-box;
+                background-color: transparent;
+                overflow-y: hidden;
+                padding: 1.5rem 0;
+                resize: none;
+            }
+
+            hr.style6 {
+                height: 10px;
+                border: 0;
+                box-shadow: 0 10px 10px -10px #8c8b8b inset;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+
+            #hr-nav {
+                margin-left: 0% !important;
+                margin-right: 0% !important;
+            }
+
+            section > div {
+                margin-left: 25%;
+                margin-right: 25%;
+                margin-bottom: 2px;
+                font-size: .9rem;
+            }
+
+            button {
+                margin-left: 40%;
+                margin-right: 40%;
+            }
 
             @media (min-width: 500px) {
                 
@@ -117,11 +168,15 @@
         </style>
     </head>
     <nav class="main-nav">
-        <ul>
-            <li><a href="#" id="home">Home</a></li>
-            <li><a href="#" id="about">About</a></li>
-            <li><a href="#" id="contact">Contact</a></li>
-        </ul>
+        <div class="nav-content">
+            <h3>John Michael Kovachi</h3>
+            <ul>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="about">About</a></li>
+                <li><a href="#" id="contact">Contact</a></li>
+            </ul>
+        </div>
+        <hr id="hr-nav" class="style6">
     </nav>
     <div class="content">
         <section class="intro">
@@ -135,9 +190,9 @@
                 <a class="links" href="https://www.instagram.com/jmkovachi"><i class="fa-3x fab fa-instagram"></i> <!-- this icon's 1) style prefix == fas and 2) icon name == stroopwafel --></a>
             </div>
         </section>
-        <section class="break">
-            <br>
-        </section>
+        <br>
+        <hr class="style6">
+        <br>
         <section>
             <h2 class="center">About</h2>
             <p class="center">Hi, I'm John Michael (yes, I have two first names!). I am an aspiring software
@@ -156,6 +211,9 @@
                 My next goals are to complete a React Native project I've been excited about and then foray into a project related to distributed systems.
             </p>
         </section>
+        <br>
+        <hr class="style6">
+        <br>
         <section>
             <h2 class="center">Contact</h2>
             <div>Name</div>
@@ -163,7 +221,8 @@
             <div>Email</div>
             <input class="center" name="email">
             <div></div>
-            <textarea placeholder="Message me"></textarea>
+            <textarea name="message" placeholder="Message"></textarea>
+            <button>Email</button>
         </section>
     </div>
     <footer class="main-footer">
