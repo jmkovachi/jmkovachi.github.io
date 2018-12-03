@@ -21,7 +21,11 @@ html {
     grid-area: ad;
 }
 .main-footer {
-    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 h1 {
