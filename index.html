@@ -241,12 +241,14 @@
         <section>
             <h2 class="center">Contact</h2>
             <div>Name</div>
-            <input class="center" name="name">
-            <div>Email</div>
-            <input class="center" name="email">
-            <div></div>
-            <textarea name="message" placeholder="Message"></textarea>
-            <button>Email</button>
+            <form action="https://formspree.io/johnm.kovachi@gmail.com" method="POST">
+                <input class="center" name="name">
+                <div>Email</div>
+                <input class="center" name="_replyto">
+                <div></div>
+                <textarea name="body" placeholder="Message"></textarea>
+                <button type="submit" value="Send">Email</button>
+            </form>
         </section>
     </div>
     <footer class="main-footer">
